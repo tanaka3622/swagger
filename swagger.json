@@ -10,10 +10,6 @@
     "title" : "Simple Inventory API",
     "contact" : {
       "email" : "you@your-company.com"
-    },
-    "license" : {
-      "name" : "Apache 2.0",
-      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
   "tags" : [ {
@@ -23,6 +19,12 @@
     "name" : "developers",
     "description" : "Operations available to regular developers"
   } ],
+  "x-amazon-apigateway-gateway-responses" : {
+    "responseParameters" : {
+      "method.response.header.Access-Control-Allow-Methods" : "'GET,OPTIONS'",
+      "method.response.header.Access-Control-Allow-Origin" : "'*'"
+    }
+  },
   "paths" : {
     "/projects" : {
       "get" : {
